@@ -6,7 +6,7 @@ const phoneField = document.getElementById("phone");
 document
   .querySelector("#phone-checkbox")
   .addEventListener("change", function () {
-    if (!this.checked) {
+    if (this.checked) {
       phoneLabelSpan.style.display = "inline";
       phoneField.required = !isPhoneRequired;
       isPhoneRequired = !isPhoneRequired;
@@ -17,7 +17,7 @@ document
     }
   });
 
-document.querySelector('button[type="submito"]').addEventListener(
+document.querySelector('button[type="submit"]').addEventListener(
   "click",
   function (event) {
     event.preventDefault();
