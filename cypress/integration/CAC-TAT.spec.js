@@ -218,11 +218,11 @@ describe("Central de Atendimento ao Cliente TAT", function () {
         expect($input[0].files[0].name).to.equal("example.json");
       });
   });
-  it.only("verifica que a política de privacidade abre em outra aba sem a necessidade de um clique", function () {
+  it("verifica que a política de privacidade abre em outra aba sem a necessidade de um clique", function () {
     cy.get('a[href="privacy.html"]').should("have.attr", "target", "_blank");
   });
 
-  it.only("acessa a página da política de privacidade removendo o target e então clicando no link", function () {
+  it("acessa a página da política de privacidade removendo o target e então clicando no link", function () {
     cy.get('a[href="privacy.html"]')
       .invoke("removeAttr", "target")
       .click()
@@ -230,7 +230,7 @@ describe("Central de Atendimento ao Cliente TAT", function () {
       .should("contain", "privacy.html");
   });
 
-  it.only("testa a página da política de privacidade de forma independente", function () {
+  it("testa a página da política de privacidade de forma independente", function () {
     cy.get('a[href="privacy.html"]')
       .invoke("removeAttr", "target")
       .click()
